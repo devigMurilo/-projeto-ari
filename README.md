@@ -34,7 +34,8 @@ python -m http.server 8000
 ## Estrutura
 
 ```
-assets/css/site.css   folha de estilo única (tokens, componentes, responsivo, alto contraste)
+assets/css/site.css   folha de estilo única (tokens, componentes, responsivo)
+assets/img/           brasão do município (logo do cabeçalho, rodapé e favicon)
 assets/js/site.js     cabeçalho/rodapé compartilhados + interações
 *.html                uma página por rota, apenas com o conteúdo do <main>
 ```
@@ -58,17 +59,42 @@ componentes de conteúdo, utilitários e media queries.
 
 ### Comportamentos prontos
 
-- **Acessibilidade**: escala de fonte (A / A+ / A++) e alto contraste, persistidos em `localStorage`.
+- **Acessibilidade**: escala de fonte (A / A+ / A++), persistida em `localStorage`.
 - **Menu mobile**: alternado pelo botão hambúrguer abaixo de 1024px.
-- **Busca do cabeçalho**: envia para `servicos.html?q=termo`, que já filtra pelo parâmetro.
+- **Busca do cabeçalho**: campo inline a partir de 1360px; abaixo disso, botão de lupa que abre um painel
+  (fecha com `Esc`). Em qualquer caso envia para `servicos.html?q=termo`, que já filtra pelo parâmetro.
 - **Filtros de lista**: qualquer bloco com `data-filter-scope` combina campo de busca
   (`data-filter-input`), chips (`data-filter`) e itens (`data-item data-category`),
   com contador (`data-filter-count`) e estado vazio (`.empty-state`).
 - **Abas**: container `data-tabs` com botões `.tab` e painéis `.tab-panel`.
 - **Formulários**: `data-mock-form` bloqueia o envio e exibe um protocolo simulado — nenhum dado sai do navegador.
 
-## Dados
+## Dados e links externos
 
 Nomes de secretarias, secretários, endereços, telefones, unidades de saúde e escolares foram
-extraídos do portal oficial. Valores financeiros, licitações, atos normativos, notícias e a
-composição da Câmara são **ilustrativos**, criados apenas para demonstrar as telas.
+extraídos do portal oficial. Valores financeiros, licitações, atos normativos e a composição da
+Câmara são **ilustrativos**, criados apenas para demonstrar as telas.
+
+As **notícias são reais**: títulos, datas, imagens e links vêm das publicações de
+`saotome.rn.gov.br` (API REST do WordPress do portal). Os resumos foram reescritos para caber no
+layout. `noticia.html` demonstra a página de detalhe com um resumo próprio da matéria de 14/08/2026
+e botão para a publicação original.
+
+Todo card de serviço abre o sistema oficial correspondente em nova aba (classe `.ext`, que
+desenha a seta de link externo):
+
+| Serviço | Destino |
+|---|---|
+| IPTU, débitos, certidão negativa | Portal do Contribuinte (`app.topsolutionsrn.com.br`) |
+| NFS-e | `gov.br/nfse` |
+| Agendamento de consulta | Meu SUS Digital |
+| Cartão Nacional de Saúde, vacinação | Ministério da Saúde (gov.br) |
+| Matrícula na rede municipal | `saotome.rn.gov.br/unidades-escolares/` |
+| Transporte escolar | FNDE — PNATE |
+| Ouvidoria e e-SIC | Fala.BR (CGU) |
+| CRAS e assistência social | Cadastro Único (gov.br) |
+| Alvará e abertura de empresa | REDESIM |
+| Licitações e editais | PNCP e portal do município |
+| Receitas, despesas, folha, diárias | Portal da Transparência do município |
+| Relatórios LRF (RREO/RGF) | Siconfi — Tesouro Nacional |
+| Leis, decretos, portarias | Diário Oficial dos Municípios (FEMURN) |

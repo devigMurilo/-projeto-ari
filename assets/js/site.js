@@ -63,8 +63,7 @@
     phone: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>',
     search: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="M21 21l-4.3-4.3"/></svg>',
     menu: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>',
-    building: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>',
-    contrast: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 000 20z" fill="currentColor"/></svg>',
+    brasao: '<img src="assets/img/brasao-sao-tome.png" alt="Brasão do município de São Tomé/RN" width="48" height="48">',
     libras: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" d="M9.5 9.5c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5-2.5 2-2.5 3.5m0 3.5h.01"/></svg>'
   };
 
@@ -76,9 +75,9 @@
     }).join('');
   }
 
-  function searchForm(id) {
+  function searchForm(id, extraClass) {
     return '' +
-      '<form class="search" role="search" data-site-search>' +
+      '<form class="search' + (extraClass ? ' ' + extraClass : '') + '" role="search" data-site-search>' +
         '<label class="sr-only" for="' + id + '">Buscar no site</label>' +
         ICONS.search +
         '<input id="' + id + '" type="search" name="q" placeholder="Buscar no site...">' +
@@ -105,7 +104,6 @@
             '<button class="a11y__btn" data-font="base" aria-pressed="false" aria-label="Fonte padrão">A</button>' +
             '<button class="a11y__btn" data-font="font-lg" aria-pressed="false" aria-label="Aumentar fonte">A+</button>' +
             '<button class="a11y__btn" data-font="font-xl" aria-pressed="false" aria-label="Aumentar mais a fonte">A++</button>' +
-            '<button class="a11y__btn a11y__btn--wide" data-contrast aria-pressed="false" aria-label="Alternar alto contraste">' + ICONS.contrast + ' Contraste</button>' +
             '<a class="a11y__btn a11y__btn--wide" href="contato.html#acessibilidade">Libras</a>' +
           '</div>' +
         '</div>' +
@@ -115,7 +113,7 @@
       '<div class="container">' +
         '<div class="site-header__inner">' +
           '<a class="brand" href="index.html">' +
-            '<span class="brand__mark">' + ICONS.building + '</span>' +
+            '<span class="brand__mark">' + ICONS.brasao + '</span>' +
             '<span>' +
               '<span class="brand__name">Prefeitura de São Tomé</span><br>' +
               '<span class="brand__sub">Estado do Rio Grande do Norte</span>' +
@@ -123,13 +121,16 @@
           '</a>' +
           '<nav class="nav" aria-label="Menu principal">' + navLinks(active) + '</nav>' +
           '<div class="header__actions">' +
-            searchForm('busca-desktop') +
+            searchForm('busca-desktop', 'search--inline') +
+            '<button class="icon-btn icon-btn--search" type="button" data-search-toggle aria-controls="searchPanel" aria-expanded="false" aria-label="Abrir busca">' + ICONS.search + '</button>' +
             '<button class="icon-btn icon-btn--mobile" type="button" data-menu-toggle aria-controls="mobileMenu" aria-expanded="false" aria-label="Abrir menu">' + ICONS.menu + '</button>' +
           '</div>' +
         '</div>' +
       '</div>' +
+      '<div class="search-panel" id="searchPanel" hidden>' +
+        '<div class="container">' + searchForm('busca-painel', 'search--panel') + '</div>' +
+      '</div>' +
       '<nav class="mobile-menu" id="mobileMenu" aria-label="Menu principal (mobile)">' +
-        searchForm('busca-mobile') +
         navLinks(active) +
         '<a class="nav-link" href="servicos.html">Serviços</a>' +
         '<a class="nav-link" href="noticias.html">Notícias</a>' +
@@ -146,7 +147,7 @@
         '<div class="site-footer__grid">' +
           '<div>' +
             '<div class="site-footer__brand">' +
-              '<span class="brand__mark">' + ICONS.building + '</span>' +
+              '<span class="brand__mark">' + ICONS.brasao + '</span>' +
               '<p>Prefeitura de São Tomé/RN</p>' +
             '</div>' +
             '<p class="small">Praça Antônio Assunção, 276 — Centro<br>São Tomé/RN — CEP 59.400-000<br>Atendimento: 7h30 às 11h30 e 13h às 17h</p>' +
@@ -168,7 +169,6 @@
         '</div>' +
         '<div class="site-footer__bottom">' +
           '<p>&copy; <span data-year></span> Prefeitura Municipal de São Tomé/RN — Todos os direitos reservados.</p>' +
-          '<p>Protótipo de redesign · dados ilustrativos</p>' +
         '</div>' +
       '</div>' +
     '</footer>' +
@@ -186,28 +186,17 @@
     });
   }
 
-  function applyContrast(on) {
-    document.documentElement.classList.toggle('contrast', on);
-    try { localStorage.setItem('pmst:contrast', on ? '1' : '0'); } catch (e) {}
-    document.querySelectorAll('[data-contrast]').forEach(function (btn) {
-      btn.setAttribute('aria-pressed', String(on));
-    });
-  }
-
   function initA11y() {
-    var font = 'base', contrast = false;
+    var font = 'base';
     try {
       font = localStorage.getItem('pmst:font') || 'base';
-      contrast = localStorage.getItem('pmst:contrast') === '1';
+      localStorage.removeItem('pmst:contrast');
     } catch (e) {}
     applyFont(font);
-    applyContrast(contrast);
 
     document.addEventListener('click', function (ev) {
       var fontBtn = ev.target.closest('[data-font]');
       if (fontBtn) { applyFont(fontBtn.dataset.font); return; }
-      var contrastBtn = ev.target.closest('[data-contrast]');
-      if (contrastBtn) { applyContrast(!document.documentElement.classList.contains('contrast')); return; }
       var fab = ev.target.closest('[data-fab]');
       if (fab) { window.location.href = 'contato.html#acessibilidade'; }
     });
@@ -221,6 +210,104 @@
     toggle.addEventListener('click', function () {
       var open = menu.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', String(open));
+      if (open) closeSearchPanel();
+    });
+  }
+
+  /* -------- Ajuste do cabeçalho: campo de busca inline x lupa ----------- */
+  function fitHeader() {
+    var header = document.querySelector('.site-header');
+    if (!header) return;
+    var inner = header.querySelector('.site-header__inner');
+    var nav = header.querySelector('.nav');
+    if (!inner || !nav) return;
+
+    header.classList.remove('has-inline-search', 'nav-collapsed');
+    if (window.innerWidth < 1024) return;
+
+    var overflows = function () {
+      return nav.scrollWidth > nav.clientWidth + 1 || inner.scrollWidth > inner.clientWidth + 1;
+    };
+
+    // 1ª tentativa: menu + campo de busca inline na mesma linha
+    header.classList.add('has-inline-search');
+    if (!overflows()) return;
+
+    // 2ª: mantém o menu, busca vira botão de lupa
+    header.classList.remove('has-inline-search');
+    if (!overflows()) return;
+
+    // 3ª: nem o menu cabe — recolhe tudo no hambúrguer
+    header.classList.add('nav-collapsed');
+    closeSearchPanel();
+  }
+
+  function initHeaderFit() {
+    var timer;
+    var lastWidth = document.documentElement.clientWidth;
+
+    // Duas passadas: a primeira medição logo após um resize pode pegar o
+    // layout no meio da troca de media query.
+    function fitTwice() {
+      fitHeader();
+      requestAnimationFrame(function () { requestAnimationFrame(fitHeader); });
+    }
+
+    function schedule() {
+      clearTimeout(timer);
+      timer = setTimeout(fitTwice, 120);
+    }
+
+    fitTwice();
+    window.addEventListener('resize', schedule);
+
+    // Observa a largura do documento: cobre casos em que o evento resize
+    // não chega (janela embutida, zoom, mudança de escala de fonte).
+    if (window.ResizeObserver) {
+      new ResizeObserver(function (entries) {
+        var w = Math.round(entries[0].contentRect.width);
+        if (w === lastWidth) return;
+        lastWidth = w;
+        schedule();
+      }).observe(document.documentElement);
+    }
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(fitHeader);
+    }
+  }
+
+  /* ------------------- Painel de busca (telas estreitas) ---------------- */
+  function closeSearchPanel() {
+    var panel = document.getElementById('searchPanel');
+    var toggle = document.querySelector('[data-search-toggle]');
+    if (!panel || !toggle) return;
+    panel.hidden = true;
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Abrir busca');
+  }
+
+  function initSearchPanel() {
+    var panel = document.getElementById('searchPanel');
+    var toggle = document.querySelector('[data-search-toggle]');
+    var menu = document.getElementById('mobileMenu');
+    if (!panel || !toggle) return;
+
+    toggle.addEventListener('click', function () {
+      var open = panel.hidden;
+      panel.hidden = !open;
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Fechar busca' : 'Abrir busca');
+      if (open) {
+        if (menu) { menu.classList.remove('is-open'); }
+        var menuToggle = document.querySelector('[data-menu-toggle]');
+        if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+        panel.querySelector('input').focus();
+      }
+    });
+
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape' && !panel.hidden) { closeSearchPanel(); toggle.focus(); }
     });
   }
 
@@ -297,6 +384,24 @@
     });
   }
 
+  /* --------------------------- Copiar link ------------------------------ */
+  function initCopyLink() {
+    document.querySelectorAll('[data-copy-link]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var url = btn.dataset.copyLink;
+        var status = document.querySelector('[data-copy-status]');
+        var done = function (ok) {
+          if (status) status.textContent = ok ? 'Link copiado.' : 'Não foi possível copiar: ' + url;
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(function () { done(true); }, function () { done(false); });
+        } else {
+          done(false);
+        }
+      });
+    });
+  }
+
   /* --------------------- Formulários (somente protótipo) ---------------- */
   function initForms() {
     document.querySelectorAll('[data-mock-form]').forEach(function (form) {
@@ -323,10 +428,13 @@
       el.textContent = String(new Date().getFullYear());
     });
     initA11y();
+    initHeaderFit();
     initMenu();
+    initSearchPanel();
     initSearch();
     initTabs();
     initFilters();
+    initCopyLink();
     initForms();
   }
 
