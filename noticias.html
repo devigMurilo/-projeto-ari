@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notícias — Prefeitura Municipal de São Tomé/RN</title>
+<meta name="description" content="Notícias, comunicados e ações da Prefeitura Municipal de São Tomé/RN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
+</head>
+<body data-page="noticias">
+
+<main id="conteudo">
+
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Você está em">
+        <a href="index.html">Início</a> <span>/</span> <span aria-current="page">Notícias</span>
+      </nav>
+      <h1>Notícias</h1>
+      <p>Comunicados oficiais, ações das secretarias e acontecimentos do município.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" data-filter-scope>
+
+      <div class="filter-bar">
+        <form class="search" role="search">
+          <label class="sr-only" for="filtro-noticias">Buscar notícia</label>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="M21 21l-4.3-4.3"/></svg>
+          <input id="filtro-noticias" type="search" placeholder="Buscar por título ou assunto..." data-filter-input>
+        </form>
+        <div class="chips" role="group" aria-label="Filtrar por editoria">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">Todas</button>
+          <button class="chip" type="button" data-filter="saude" aria-pressed="false">Saúde</button>
+          <button class="chip" type="button" data-filter="educacao" aria-pressed="false">Educação</button>
+          <button class="chip" type="button" data-filter="institucional" aria-pressed="false">Institucional</button>
+          <button class="chip" type="button" data-filter="obras" aria-pressed="false">Obras</button>
+          <button class="chip" type="button" data-filter="cultura" aria-pressed="false">Cultura</button>
+        </div>
+        <p class="small muted"><span data-filter-count>9</span> notícias</p>
+      </div>
+
+      <div class="grid grid--3">
+
+        <a class="news-card" href="noticia.html" data-item data-category="saude">
+          <div class="news-card__media">
+            <img src="https://placehold.co/600x340/0f52d1/eef6ff?text=Sa%C3%BAde" alt="Equipe de saúde em atendimento">
+            <span class="badge">Saúde</span>
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__date">18 de agosto de 2026</p>
+            <h2 class="news-card__title">Saúde que acolhe, cuida e faz a diferença na vida das famílias</h2>
+            <p class="news-card__text">Rede municipal amplia atendimento com neuropediatra e reforça o cuidado infantil nas unidades básicas.</p>
+          </div>
+        </a>
+
+        <a class="news-card" href="noticia.html" data-item data-category="educacao">
+          <div class="news-card__media">
+            <img src="https://placehold.co/600x340/1e8f5f/ffffff?text=Educa%C3%A7%C3%A3o" alt="Alunos em sala de aula">
+            <span class="badge badge--leaf">Educação</span>
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__date">15 de agosto de 2026</p>
+            <h2 class="news-card__title">A educação de São Tomé segue avançando</h2>
+            <p class="news-card__text">Investimento em formação continuada de professores e reforma de unidades escolares da zona rural.</p>
+          </div>
+        </a>
+
+        <a class="news-card" href="noticia.html" data-item data-category="institucional">
+          <div class="news-card__media">
+            <img src="https://placehold.co/600x340/9e5b09/fff3c4?text=Institucional" alt="Ato institucional da prefeitura">
+            <span class="badge badge--accent">Institucional</span>
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__date">12 de agosto de 2026</p>
+            <h2 class="news-card__title">Agosto Lilás: informação, acolhimento e conscientização</h2>
+            <p class="news-card__text">Programação reúne palestras e atendimento especializado às mulheres do município.</p>
+          </div>
+        </a>
+
+        <a class="news-card" href="noticia.html" data-item data-category="obras">
+          <div class="news-card__media">
+            <img src="https://placehold.co/600x340/0c3384/eef6ff?text=Obras" alt="Obra de pavimentação em andamento">
+            <span class="badge">Obras</span>
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__date">08 de agosto de 2026</p>
+            <h2 class="news-card__title">Pavimentação avança no bairro Bela Vista</h2>
+            <p class="news-card__text">Serviço contempla drenagem, meio-fio e calçamento em cinco ruas do bairro.</p>
+          </div>
+        </a>
+
+        <a class="news-card" href="noticia.html" data-item data-category="saude">
+          <div class="news-card__media">
+            <img src="https://placehold.co/600x340/2472fa/eef6ff?text=Vacina%C3%A7%C3%A3o" alt="Campanha de vacinação">
+            <span class="badge">Saúde</span>
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__date">05 de agosto de 2026</p>
+            <h2 class="news-card__title">Campanha de multivacinação segue nas UBS até setembro</h2>
+            <p class="news-card__text">Atualização da caderneta de crianças e adolescentes em todas as unidades de saúde.</p>
+          </div>
+        </a>
+
+        <a class="news-card" href="noticia.html" data-item data-category="cultura">
+          <div class="news-card__media">
+            <img src="https://placehold.co/600x340/e8a20a/0a1b40?text=Cultura" alt="Apresentação cultural na praça">
+            <span class="badge badge--accent">Cultura</span>
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__date">30 de julho de 2026</p>
+            <h2 class="news-card__title">Festival de cultura popular movimenta a praça central</h2>
+            <p class="news-card__text">Três dias de apresentações de grupos locais, feira de artesanato e comidas típicas.</p>
+          </div>
+        </a>
+
+        <a class="news-card" href="noticia.html" data-item data-category="educacao">
+          <div class="news-card__media">
+            <img src="https://placehold.co/600x340/187348/ffffff?text=Transporte" alt="Ônibus do transporte escolar">
+            <span class="badge badge--leaf">Educação</span>
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__date">24 de julho de 2026</p>
+            <h2 class="news-card__title">Novas rotas do transporte escolar atendem a zona rural</h2>
+            <p class="news-card__text">Ampliação beneficia estudantes das comunidades de Gameleira e Ingá de Santa Luzia.</p>
+          </div>
+        </a>
+
+        <a class="news-card" href="noticia.html" data-item data-category="institucional">
+          <div class="news-card__media">
+            <img src="https://placehold.co/600x340/0f2c6a/eef6ff?text=Transpar%C3%AAncia" alt="Reunião de prestação de contas">
+            <span class="badge badge--accent">Institucional</span>
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__date">18 de julho de 2026</p>
+            <h2 class="news-card__title">Prefeitura apresenta prestação de contas do 1º semestre</h2>
+            <p class="news-card__text">Audiência pública detalhou receitas, despesas e metas fiscais do município.</p>
+          </div>
+        </a>
+
+        <a class="news-card" href="noticia.html" data-item data-category="obras">
+          <div class="news-card__media">
+            <img src="https://placehold.co/600x340/0a3ea8/eef6ff?text=Ilumina%C3%A7%C3%A3o" alt="Instalação de iluminação pública">
+            <span class="badge">Obras</span>
+          </div>
+          <div class="news-card__body">
+            <p class="news-card__date">10 de julho de 2026</p>
+            <h2 class="news-card__title">Modernização da iluminação pública chega ao Centro</h2>
+            <p class="news-card__text">Troca por lâmpadas de LED reduz consumo e amplia a sensação de segurança.</p>
+          </div>
+        </a>
+
+      </div>
+
+      <p class="empty-state">Nenhuma notícia encontrada com esses filtros.</p>
+
+      <div class="pagination">
+        <span class="is-current">1</span>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">Próxima</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

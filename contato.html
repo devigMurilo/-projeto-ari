@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato e Acessibilidade — Prefeitura Municipal de São Tomé/RN</title>
+<meta name="description" content="Endereço, horários, telefones e recursos de acessibilidade do portal da Prefeitura de São Tomé/RN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
+</head>
+<body data-page="contato">
+
+<main id="conteudo">
+
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Você está em">
+        <a href="index.html">Início</a> <span>/</span> <span aria-current="page">Contato e Acessibilidade</span>
+      </nav>
+      <h1>Contato e Acessibilidade</h1>
+      <p>Onde encontrar a Prefeitura, com quem falar em cada assunto e quais recursos de acessibilidade o portal oferece.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid--sidebar">
+
+        <div>
+          <div class="section-head">
+            <p class="eyebrow">Fale conosco</p>
+            <h2 class="section-title">Envie uma mensagem</h2>
+            <p class="lead">Para reclamações, denúncias e pedidos de informação, use a <a href="ouvidoria.html">Ouvidoria</a> — o registro gera protocolo.</p>
+          </div>
+
+          <form class="form" data-mock-form>
+            <p class="form-status" role="status"></p>
+            <div class="form__row">
+              <div class="field">
+                <label for="c-nome">Nome</label>
+                <input id="c-nome" type="text" placeholder="Seu nome" required>
+              </div>
+              <div class="field">
+                <label for="c-email">E-mail</label>
+                <input id="c-email" type="email" placeholder="voce@email.com" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="c-setor">Setor de destino</label>
+              <select id="c-setor">
+                <option>Gabinete do Prefeito</option>
+                <option>Administração</option>
+                <option>Saúde</option>
+                <option>Educação, Cultura e Desporto</option>
+                <option>Obras, Transporte e Serviços Urbanos</option>
+                <option>Tributação</option>
+                <option>Assistência Social</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="c-mensagem">Mensagem</label>
+              <textarea id="c-mensagem" placeholder="Como podemos ajudar?" required></textarea>
+            </div>
+            <div class="row">
+              <button class="btn btn--primary" type="submit">Enviar mensagem</button>
+              <span class="small muted">Protótipo: nenhum dado é transmitido.</span>
+            </div>
+          </form>
+        </div>
+
+        <aside class="stack">
+          <div class="card">
+            <div class="card__body">
+              <h3 class="card__title">Sede da Prefeitura</h3>
+              <p class="meta-line mt-2">Praça Antônio Assunção, 276 — Centro<br>São Tomé/RN — CEP 59.400-000</p>
+              <p class="meta-line">Segunda a sexta: 7h30–11h30 e 13h–17h</p>
+              <p class="meta-line"><a href="mailto:governo@saotome.rn.gov.br">governo@saotome.rn.gov.br</a></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__body">
+              <h3 class="card__title">Ouvidoria e e-SIC</h3>
+              <p class="meta-line mt-2">Atendimento: 8h às 14h</p>
+              <p class="meta-line"><a href="mailto:ouvidoria@saotome.rn.gov.br">ouvidoria@saotome.rn.gov.br</a></p>
+              <p class="meta-line"><a href="mailto:esic@saotome.rn.gov.br">esic@saotome.rn.gov.br</a></p>
+              <a class="link-more mt-2" href="ouvidoria.html">Abrir manifestação</a>
+            </div>
+          </div>
+          <div class="map-mock">
+            <span class="map-pin map-pin--pulse" style="top:45%; left:47%"></span>
+            <span class="map-mock__tag">Praça Antônio Assunção — ilustrativo</span>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Telefones por secretaria -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Atendimento direto</p>
+        <h2 class="section-title">Telefones das secretarias</h2>
+      </div>
+      <div class="table-wrap">
+        <table class="data">
+          <caption class="sr-only">Telefones e e-mails das secretarias municipais</caption>
+          <thead>
+            <tr><th scope="col">Secretaria</th><th scope="col">Responsável</th><th scope="col">Telefone</th><th scope="col">E-mail</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Governo</td><td>José Miguel de Menezes Junior</td><td>(84) 99169-3066</td><td>governo@saotome.rn.gov.br</td></tr>
+            <tr><td>Administração</td><td>Teresa Cristina da Silva</td><td>(84) 99452-4900</td><td>administracao@saotome.rn.gov.br</td></tr>
+            <tr><td>Saúde</td><td>Katia Cristina Câmara de Oliveira</td><td>(84) 99112-9423</td><td>saude@saotome.rn.gov.br</td></tr>
+            <tr><td>Educação, Cultura e Desporto</td><td>Ana Edileuza Dantas</td><td>(84) 99415-8614</td><td>educacao@saotome.rn.gov.br</td></tr>
+            <tr><td>Planejamento e Finanças</td><td>Jorge César Silva Ribeiro</td><td>(84) 99467-3609</td><td>financas@saotome.rn.gov.br</td></tr>
+            <tr><td>Obras, Transporte e Serviços Urbanos</td><td>Marithon Macário Santos de Andrade</td><td>(84) 99168-5300</td><td>obras_servicos@saotome.rn.gov.br</td></tr>
+            <tr><td>Trabalho, Habitação e Assistência Social</td><td>Lucicarla Pereira da Silva</td><td>(84) 99218-3838</td><td>assistenciasocial@saotome.rn.gov.br</td></tr>
+            <tr><td>Agricultura, Meio Ambiente e Turismo</td><td>Jadiel Esdras Andrade</td><td>(84) 99229-3714</td><td>agricultura@saotome.rn.gov.br</td></tr>
+            <tr><td>Tributação</td><td>Rita Rangel de Lima Filha</td><td>(84) 99211-5922</td><td>tributacaostrn@gmail.com</td></tr>
+            <tr><td>Controladoria</td><td>Lindomar Pereira da Silva</td><td>(84) 99421-3736</td><td>controladoria@saotome.rn.gov.br</td></tr>
+            <tr><td>Procuradoria</td><td>Débora Vieira Fonseca</td><td>(84) 99417-1690</td><td>governo@saotome.rn.gov.br</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Acessibilidade -->
+  <section class="section" id="acessibilidade">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Portal acessível</p>
+        <h2 class="section-title">Recursos de acessibilidade</h2>
+        <p class="lead">Ferramentas disponíveis em todas as páginas deste portal.</p>
+      </div>
+
+      <div class="grid grid--3 mb-4">
+        <div class="card">
+          <div class="card__body">
+            <h3 class="card__title">Tamanho da fonte</h3>
+            <p class="card__text">Botões <strong>A</strong>, <strong>A+</strong> e <strong>A++</strong> na barra superior aumentam o texto de todo o site. A escolha fica salva no navegador.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__body">
+            <h3 class="card__title">Alto contraste</h3>
+            <p class="card__text">O botão <strong>Contraste</strong> alterna para o modo preto e branco, com links sublinhados e bordas reforçadas.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__body">
+            <h3 class="card__title">Navegação por teclado</h3>
+            <p class="card__text">Use <strong>Tab</strong> para percorrer os links e o atalho "Pular para o conteúdo principal", que aparece no primeiro Tab de cada página.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div>
+          <h3>Libras e leitores de tela</h3>
+          <p>Neste protótipo, o botão flutuante representa o ponto de integração com o VLibras (Suíte VLibras do Governo Federal). As páginas usam marcação semântica, textos alternativos em imagens e rótulos ARIA para leitores de tela.</p>
+        </div>
+      </div>
+
+      <div class="callout callout--accent mt-2">
+        <div>
+          <h3>Encontrou uma barreira de acesso?</h3>
+          <p>Relate pela <a class="link-more" href="ouvidoria.html">Ouvidoria</a> para que a equipe responsável corrija o problema.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legislação Municipal — Prefeitura Municipal de São Tomé/RN</title>
+<meta name="description" content="Leis, decretos, portarias e demais atos normativos do município de São Tomé/RN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
+</head>
+<body data-page="legislacao">
+
+<main id="conteudo">
+
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Você está em">
+        <a href="index.html">Início</a> <span>/</span> <span aria-current="page">Legislação</span>
+      </nav>
+      <h1>Legislação Municipal</h1>
+      <p>Consulte a Lei Orgânica, leis ordinárias e complementares, decretos e portarias publicados pelo Executivo municipal.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid--3 mb-4">
+        <a class="card card--hover" href="#">
+          <div class="card__body">
+            <span class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.8 5.5 9.2 5 7.5 5S4.2 5.5 3 6.253v13C4.2 18.5 5.8 18 7.5 18s3.3.5 4.5 1.253m0-13C13.2 5.5 14.8 5 16.5 5s3.3.5 4.5 1.253v13C19.8 18.5 18.2 18 16.5 18s-3.3.5-4.5 1.253"/></svg></span>
+            <h3 class="card__title">Lei Orgânica do Município</h3>
+            <p class="card__text">Texto consolidado com as emendas em vigor.</p>
+          </div>
+        </a>
+        <a class="card card--hover" href="#">
+          <div class="card__body">
+            <span class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></span>
+            <h3 class="card__title">Código Tributário Municipal</h3>
+            <p class="card__text">Regras de IPTU, ISS, taxas e contribuições.</p>
+          </div>
+        </a>
+        <a class="card card--hover" href="https://www.diariomunicipal.com.br/femurn/" target="_blank" rel="noopener">
+          <div class="card__body">
+            <span class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10l6 6v8a2 2 0 01-2 2zM8 10h6M8 14h8"/></svg></span>
+            <h3 class="card__title">Diário Oficial (FEMURN)</h3>
+            <p class="card__text">Publicação oficial dos atos do município.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container" data-filter-scope>
+      <div class="section-head">
+        <p class="eyebrow">Base normativa</p>
+        <h2 class="section-title">Atos publicados</h2>
+      </div>
+
+      <div class="filter-bar">
+        <form class="search" role="search">
+          <label class="sr-only" for="filtro-leis">Buscar ato normativo</label>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="M21 21l-4.3-4.3"/></svg>
+          <input id="filtro-leis" type="search" placeholder="Número, ano ou assunto..." data-filter-input>
+        </form>
+        <div class="chips" role="group" aria-label="Filtrar por tipo de ato">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">Todos</button>
+          <button class="chip" type="button" data-filter="lei" aria-pressed="false">Leis</button>
+          <button class="chip" type="button" data-filter="decreto" aria-pressed="false">Decretos</button>
+          <button class="chip" type="button" data-filter="portaria" aria-pressed="false">Portarias</button>
+        </div>
+        <p class="small muted"><span data-filter-count>9</span> atos</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data">
+          <caption class="sr-only">Atos normativos publicados</caption>
+          <thead>
+            <tr><th scope="col">Ato</th><th scope="col">Data</th><th scope="col">Ementa</th><th scope="col">Arquivo</th></tr>
+          </thead>
+          <tbody>
+            <tr data-item data-category="lei"><td>Lei nº 1.284/2026</td><td>05/08/2026</td><td>Institui o Programa Municipal de Atenção à Saúde da Criança.</td><td><a class="link-more" href="#">PDF</a></td></tr>
+            <tr data-item data-category="lei"><td>Lei nº 1.283/2026</td><td>22/07/2026</td><td>Dispõe sobre a política municipal de apoio à agricultura familiar.</td><td><a class="link-more" href="#">PDF</a></td></tr>
+            <tr data-item data-category="lei"><td>Lei nº 1.281/2026</td><td>30/06/2026</td><td>Autoriza abertura de crédito adicional suplementar ao orçamento vigente.</td><td><a class="link-more" href="#">PDF</a></td></tr>
+            <tr data-item data-category="decreto"><td>Decreto nº 048/2026</td><td>12/08/2026</td><td>Regulamenta o funcionamento da Ouvidoria e do e-SIC municipal.</td><td><a class="link-more" href="#">PDF</a></td></tr>
+            <tr data-item data-category="decreto"><td>Decreto nº 045/2026</td><td>28/07/2026</td><td>Estabelece o calendário de recolhimento do IPTU do exercício.</td><td><a class="link-more" href="#">PDF</a></td></tr>
+            <tr data-item data-category="decreto"><td>Decreto nº 041/2026</td><td>15/06/2026</td><td>Declara situação de emergência em razão de estiagem prolongada.</td><td><a class="link-more" href="#">PDF</a></td></tr>
+            <tr data-item data-category="portaria"><td>Portaria nº 213/2026</td><td>14/08/2026</td><td>Designa comissão de fiscalização do contrato de transporte escolar.</td><td><a class="link-more" href="#">PDF</a></td></tr>
+            <tr data-item data-category="portaria"><td>Portaria nº 208/2026</td><td>01/08/2026</td><td>Nomeia servidores aprovados em processo seletivo simplificado.</td><td><a class="link-more" href="#">PDF</a></td></tr>
+            <tr data-item data-category="portaria"><td>Portaria nº 199/2026</td><td>10/07/2026</td><td>Institui comissão de avaliação de bens patrimoniais inservíveis.</td><td><a class="link-more" href="#">PDF</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="empty-state">Nenhum ato encontrado com esses filtros.</p>
+
+      <div class="pagination">
+        <span class="is-current">1</span>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">Próxima</a>
+      </div>
+
+      <p class="small muted mt-3">Relação ilustrativa do protótipo. Na versão final, a base seria integrada ao acervo oficial e ao Diário Oficial dos Municípios.</p>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

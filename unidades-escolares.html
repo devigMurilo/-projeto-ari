@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unidades Escolares — Prefeitura Municipal de São Tomé/RN</title>
+<meta name="description" content="Escolas e creches da rede municipal de ensino de São Tomé/RN, com endereços e contatos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
+</head>
+<body data-page="secretarias">
+
+<main id="conteudo">
+
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Você está em">
+        <a href="index.html">Início</a> <span>/</span>
+        <a href="secretarias.html">Secretarias</a> <span>/</span>
+        <span aria-current="page">Unidades Escolares</span>
+      </nav>
+      <h1>Unidades Escolares</h1>
+      <p>Rede municipal de ensino: escolas e creches da zona urbana e da zona rural, com endereço e telefone de contato.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" data-filter-scope>
+
+      <div class="filter-bar">
+        <form class="search" role="search">
+          <label class="sr-only" for="filtro-escolas">Buscar unidade escolar</label>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="M21 21l-4.3-4.3"/></svg>
+          <input id="filtro-escolas" type="search" placeholder="Buscar por nome, localidade ou endereço..." data-filter-input>
+        </form>
+        <div class="chips" role="group" aria-label="Filtrar por zona">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">Todas</button>
+          <button class="chip" type="button" data-filter="urbana" aria-pressed="false">Zona urbana</button>
+          <button class="chip" type="button" data-filter="rural" aria-pressed="false">Zona rural</button>
+        </div>
+        <p class="small muted"><span data-filter-count>12</span> unidades</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data">
+          <caption class="sr-only">Unidades escolares da rede municipal</caption>
+          <thead>
+            <tr><th scope="col">Unidade</th><th scope="col">Endereço</th><th scope="col">Zona</th><th scope="col">Telefone</th></tr>
+          </thead>
+          <tbody>
+            <tr data-item data-category="rural"><td>Escola Municipal Joaquim Garcoa dos Anjo</td><td>Sítio Gameleira</td><td><span class="badge badge--soft">Rural</span></td><td>(84) 99415-8614</td></tr>
+            <tr data-item data-category="urbana"><td>Escola Municipal José Euzebio Fernandes Bezerra</td><td>Rua Sen. Dinarte Mariz, nº 86</td><td><span class="badge badge--leaf">Urbana</span></td><td>(84) 99150-5231</td></tr>
+            <tr data-item data-category="urbana"><td>Escola Municipal Monsenhor Manoel Pereira da Costa</td><td>Rua Florência Luciano, S/N</td><td><span class="badge badge--leaf">Urbana</span></td><td>(84) 99413-8157</td></tr>
+            <tr data-item data-category="urbana"><td>Creche Proinfância Maria do Socorro Dias</td><td>Rua José Lopes Pereira</td><td><span class="badge badge--leaf">Urbana</span></td><td>(84) 99140-4015</td></tr>
+            <tr data-item data-category="urbana"><td>Escola Municipal Dr. José Aribaldo de Carvalho</td><td>Rua Padre Ramiro Varela, S/N</td><td><span class="badge badge--leaf">Urbana</span></td><td>(84) 99140-4029</td></tr>
+            <tr data-item data-category="rural"><td>Escola Municipal Joventino Pereira de Araújo</td><td>Ingá de Santa Luzia</td><td><span class="badge badge--soft">Rural</span></td><td>(84) 99140-2331</td></tr>
+            <tr data-item data-category="rural"><td>Escola Municipal Antônio Marcelino dos Santos</td><td>Serra do Lameiro</td><td><span class="badge badge--soft">Rural</span></td><td>(84) 99184-5645</td></tr>
+            <tr data-item data-category="rural"><td>Escola Municipal Eloi Ribeiro de Andrade</td><td>Vila São Francisco</td><td><span class="badge badge--soft">Rural</span></td><td>(84) 99415-8614</td></tr>
+            <tr data-item data-category="rural"><td>Escola Municipal Ovidio Honorato Moreira</td><td>Morada Nova</td><td><span class="badge badge--soft">Rural</span></td><td>(84) 99602-4861</td></tr>
+            <tr data-item data-category="rural"><td>Escola Municipal Audemir Marques da Silva</td><td>Espinheiro</td><td><span class="badge badge--soft">Rural</span></td><td>(84) 99150-5150</td></tr>
+            <tr data-item data-category="rural"><td>Escola Municipal José Fidelis de Valença</td><td>Pedra Preta</td><td><span class="badge badge--soft">Rural</span></td><td>(84) 99415-8614</td></tr>
+            <tr data-item data-category="rural"><td>Escola Municipal Sebastião Fideles de Araújo</td><td>Recreio</td><td><span class="badge badge--soft">Rural</span></td><td>(84) 99415-8614</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="empty-state">Nenhuma unidade escolar encontrada com esses filtros.</p>
+
+      <div class="grid grid--3 mt-6">
+        <div class="card">
+          <div class="card__body">
+            <h3 class="card__title">Matrículas</h3>
+            <p class="card__text">Matrícula e rematrícula na rede municipal, com documentos exigidos e prazos por etapa de ensino.</p>
+            <a class="link-more mt-2" href="servicos.html?q=matr%C3%ADcula">Ver serviço</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__body">
+            <h3 class="card__title">Transporte escolar</h3>
+            <p class="card__text">Rotas atendidas na zona rural e canal para solicitar novos itinerários.</p>
+            <a class="link-more mt-2" href="servicos.html?q=transporte">Ver serviço</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__body">
+            <h3 class="card__title">Secretaria de Educação</h3>
+            <p class="card__text">Ana Edileuza Dantas — (84) 99415-8614</p>
+            <p class="meta-line mt-2"><a href="mailto:educacaostrn@gmail.com">educacaostrn@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

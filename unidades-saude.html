@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unidades de Saúde — Prefeitura Municipal de São Tomé/RN</title>
+<meta name="description" content="Unidades Básicas de Saúde de São Tomé/RN: endereços, horários de funcionamento e contatos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
+</head>
+<body data-page="secretarias">
+
+<main id="conteudo">
+
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Você está em">
+        <a href="index.html">Início</a> <span>/</span>
+        <a href="secretarias.html">Secretarias</a> <span>/</span>
+        <span aria-current="page">Unidades de Saúde</span>
+      </nav>
+      <h1>Unidades de Saúde</h1>
+      <p>Rede de Unidades Básicas de Saúde do município, com endereços, horários e telefone de contato.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" data-filter-scope>
+
+      <div class="filter-bar">
+        <form class="search" role="search">
+          <label class="sr-only" for="filtro-ubs">Buscar unidade</label>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="M21 21l-4.3-4.3"/></svg>
+          <input id="filtro-ubs" type="search" placeholder="Buscar por nome ou endereço..." data-filter-input>
+        </form>
+        <div class="chips" role="group" aria-label="Filtrar por zona">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">Todas</button>
+          <button class="chip" type="button" data-filter="urbana" aria-pressed="false">Zona urbana</button>
+          <button class="chip" type="button" data-filter="rural" aria-pressed="false">Zona rural</button>
+        </div>
+        <p class="small muted"><span data-filter-count>5</span> unidades</p>
+      </div>
+
+      <div class="grid grid--3">
+
+        <article class="unit-card" data-item data-category="urbana">
+          <div class="unit-card__head">
+            <div>
+              <h3>UBS Geiscica Helen</h3>
+              <p class="unit-card__role">Bela Vista</p>
+            </div>
+            <span class="badge badge--leaf">Urbana</span>
+          </div>
+          <p class="meta-line">Rua Aura Galvão, nº 10</p>
+          <p class="meta-line">Segunda a sexta: 07h30–11h30 e 13h00–16h30</p>
+          <p class="meta-line">(84) 99197-9033</p>
+          <p class="meta-line"><a href="mailto:saudestrn@gmail.com">saudestrn@gmail.com</a></p>
+        </article>
+
+        <article class="unit-card" data-item data-category="urbana">
+          <div class="unit-card__head">
+            <div>
+              <h3>UBS José Eriberto Rocha</h3>
+              <p class="unit-card__role">Potengi</p>
+            </div>
+            <span class="badge badge--leaf">Urbana</span>
+          </div>
+          <p class="meta-line">Rua Augusto Severo, nº 125</p>
+          <p class="meta-line">Segunda a sexta: 07h30–11h30 e 13h00–16h30</p>
+          <p class="meta-line">(84) 99197-9033</p>
+          <p class="meta-line"><a href="mailto:saudestrn@gmail.com">saudestrn@gmail.com</a></p>
+        </article>
+
+        <article class="unit-card" data-item data-category="urbana">
+          <div class="unit-card__head">
+            <div>
+              <h3>UBS Manoel Guedes</h3>
+              <p class="unit-card__role">Centro</p>
+            </div>
+            <span class="badge badge--leaf">Urbana</span>
+          </div>
+          <p class="meta-line">Rua Cônego José Cabral, nº 379</p>
+          <p class="meta-line">Segunda a sexta: 07h30–11h30 e 13h00–16h30</p>
+          <p class="meta-line">(84) 99197-9033</p>
+          <p class="meta-line"><a href="mailto:saudestrn@gmail.com">saudestrn@gmail.com</a></p>
+        </article>
+
+        <article class="unit-card" data-item data-category="rural">
+          <div class="unit-card__head">
+            <div>
+              <h3>UBS Ingá de Santa Luzia</h3>
+              <p class="unit-card__role">Sítio Ingá de Santa Luzia</p>
+            </div>
+            <span class="badge badge--soft">Rural</span>
+          </div>
+          <p class="meta-line">Sítio Ingá de Santa Luzia — zona rural</p>
+          <p class="meta-line">Segunda a sexta: 07h30–13h30</p>
+          <p class="meta-line">(84) 99197-9033</p>
+          <p class="meta-line"><a href="mailto:saudestrn@gmail.com">saudestrn@gmail.com</a></p>
+        </article>
+
+        <article class="unit-card" data-item data-category="rural">
+          <div class="unit-card__head">
+            <div>
+              <h3>UBS Manoel Medeiros Filho</h3>
+              <p class="unit-card__role">Sítio Gameleira</p>
+            </div>
+            <span class="badge badge--soft">Rural</span>
+          </div>
+          <p class="meta-line">Sítio Gameleira — zona rural</p>
+          <p class="meta-line">Segunda a sexta: 07h30–13h30</p>
+          <p class="meta-line">(84) 99197-9033</p>
+          <p class="meta-line"><a href="mailto:saudestrn@gmail.com">saudestrn@gmail.com</a></p>
+        </article>
+
+      </div>
+
+      <p class="empty-state">Nenhuma unidade encontrada com esses filtros.</p>
+
+      <div class="grid grid--sidebar mt-6">
+        <div class="map-mock">
+          <span class="map-pin map-pin--leaf map-pin--pulse" style="top:32%; left:30%"></span>
+          <span class="map-pin map-pin--leaf" style="top:48%; left:52%"></span>
+          <span class="map-pin map-pin--leaf" style="top:60%; left:38%"></span>
+          <span class="map-pin" style="top:26%; left:70%"></span>
+          <span class="map-pin" style="top:72%; left:64%"></span>
+          <span class="map-mock__tag">Mapa interativo — ilustrativo</span>
+        </div>
+        <aside class="stack">
+          <div class="callout">
+            <div>
+              <h3>Urgência e emergência</h3>
+              <p>Em caso de urgência, procure a unidade mais próxima ou acione o SAMU pelo <strong>192</strong>.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__body">
+              <h3 class="card__title">Secretaria Municipal de Saúde</h3>
+              <p class="card__text">Katia Cristina Câmara de Oliveira</p>
+              <p class="meta-line mt-2">Praça Antônio Assunção, 276, Centro</p>
+              <p class="meta-line">(84) 99112-9423</p>
+              <p class="meta-line"><a href="mailto:saude@saotome.rn.gov.br">saude@saotome.rn.gov.br</a></p>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

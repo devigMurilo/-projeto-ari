@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ouvidoria e e-SIC — Prefeitura Municipal de São Tomé/RN</title>
+<meta name="description" content="Registre reclamações, denúncias, elogios e pedidos de acesso à informação na Ouvidoria de São Tomé/RN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
+</head>
+<body data-page="ouvidoria">
+
+<main id="conteudo">
+
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Você está em">
+        <a href="index.html">Início</a> <span>/</span> <span aria-current="page">Ouvidoria</span>
+      </nav>
+      <h1>Ouvidoria Municipal</h1>
+      <p>Canal direto entre o cidadão e a Prefeitura para reclamações, denúncias, sugestões, elogios e pedidos de informação.</p>
+    </div>
+  </section>
+
+  <!-- Tipos de manifestação -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Como podemos ajudar</p>
+        <h2 class="section-title">Tipos de manifestação</h2>
+      </div>
+
+      <div class="grid grid--4">
+        <div class="card">
+          <div class="card__body">
+            <span class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></span>
+            <h3 class="card__title">Reclamação</h3>
+            <p class="card__text">Serviço público prestado de forma insatisfatória ou não prestado.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__body">
+            <span class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21v-4a4 4 0 014-4h10M14 5l4 4-4 4"/></svg></span>
+            <h3 class="card__title">Denúncia</h3>
+            <p class="card__text">Indício de irregularidade praticada por agente público ou terceiro.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__body">
+            <span class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.8a2 2 0 011.9 2.6l-2.3 7A2 2 0 0116.5 21H5V10l4-8 1 .5A3 3 0 0111.6 5L11 8h3z"/></svg></span>
+            <h3 class="card__title">Elogio</h3>
+            <p class="card__text">Reconhecimento de bom atendimento ou de serviço bem executado.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__body">
+            <span class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-3-3v6M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
+            <h3 class="card__title">Sugestão e crítica</h3>
+            <p class="card__text">Ideias e observações para melhorar os serviços municipais.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário + canais -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="grid grid--sidebar">
+
+        <div>
+          <div class="section-head">
+            <p class="eyebrow">Registro online</p>
+            <h2 class="section-title">Registrar manifestação</h2>
+            <p class="lead">Ao enviar, o sistema gera um número de protocolo para acompanhamento.</p>
+          </div>
+
+          <form class="form" data-mock-form>
+            <p class="form-status" role="status"></p>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="tipo">Tipo de manifestação</label>
+                <select id="tipo" name="tipo">
+                  <option>Reclamação</option>
+                  <option>Denúncia</option>
+                  <option>Elogio</option>
+                  <option>Sugestão</option>
+                  <option>Crítica</option>
+                  <option>Pedido de informação (e-SIC)</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="area">Área responsável</label>
+                <select id="area" name="area">
+                  <option>Saúde</option>
+                  <option>Educação</option>
+                  <option>Obras e Serviços Urbanos</option>
+                  <option>Assistência Social</option>
+                  <option>Tributação</option>
+                  <option>Administração</option>
+                  <option>Não sei informar</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="nome">Nome completo</label>
+                <input id="nome" name="nome" type="text" placeholder="Seu nome">
+                <span class="hint">Opcional em caso de manifestação anônima.</span>
+              </div>
+              <div class="field">
+                <label for="email">E-mail para retorno</label>
+                <input id="email" name="email" type="email" placeholder="voce@email.com">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="assunto">Assunto</label>
+              <input id="assunto" name="assunto" type="text" placeholder="Resumo em uma linha" required>
+            </div>
+
+            <div class="field">
+              <label for="mensagem">Descrição</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Descreva o ocorrido com data, local e demais detalhes." required></textarea>
+              <span class="hint">Não inclua senhas, dados bancários ou documentos de terceiros.</span>
+            </div>
+
+            <div class="field field--inline">
+              <input id="anonimo" name="anonimo" type="checkbox">
+              <label for="anonimo">Desejo registrar de forma anônima</label>
+            </div>
+
+            <div class="row">
+              <button class="btn btn--primary" type="submit">Enviar manifestação</button>
+              <span class="small muted">Protótipo: nenhum dado é transmitido.</span>
+            </div>
+          </form>
+        </div>
+
+        <aside class="stack">
+          <div class="card">
+            <div class="card__body">
+              <h3 class="card__title">Atendimento da Ouvidoria</h3>
+              <p class="card__text">Responsável: Thamara Xavier Dias</p>
+              <p class="meta-line mt-2">Praça Antônio Assunção, 276, Centro — São Tomé/RN — CEP 59.400-000</p>
+              <p class="meta-line">Segunda a sexta, das 8h às 14h</p>
+              <p class="meta-line"><a href="mailto:ouvidoria@saotome.rn.gov.br">ouvidoria@saotome.rn.gov.br</a></p>
+            </div>
+          </div>
+
+          <div class="card" id="esic">
+            <div class="card__body">
+              <h3 class="card__title">e-SIC — Acesso à informação</h3>
+              <p class="card__text">Canal para solicitar informações dos órgãos e entidades do Poder Executivo municipal.</p>
+              <p class="meta-line mt-2"><a href="mailto:esic@saotome.rn.gov.br">esic@saotome.rn.gov.br</a></p>
+              <p class="meta-line">Prazo de resposta: 20 dias, prorrogável por mais 10.</p>
+            </div>
+          </div>
+
+          <div class="callout callout--accent">
+            <div>
+              <h3>Antes de abrir um pedido</h3>
+              <p>Verifique se a informação já está publicada no <a class="link-more" href="transparencia.html">Portal da Transparência</a>.</p>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Consulta de protocolo + FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid--sidebar">
+        <div>
+          <div class="section-head">
+            <p class="eyebrow">Dúvidas frequentes</p>
+            <h2 class="section-title">Como funciona o atendimento</h2>
+          </div>
+
+          <details class="accordion" open>
+            <summary>Qual o prazo de resposta?</summary>
+            <div class="accordion__body">Manifestações de ouvidoria são respondidas em até 30 dias. Pedidos de acesso à informação seguem a Lei nº 12.527/2011: 20 dias, prorrogáveis por mais 10 mediante justificativa.</div>
+          </details>
+          <details class="accordion">
+            <summary>Posso registrar sem me identificar?</summary>
+            <div class="accordion__body">Sim. A manifestação anônima é aceita e apurada, mas sem identificação não é possível enviar retorno individual — o acompanhamento é feito apenas pelo número de protocolo.</div>
+          </details>
+          <details class="accordion">
+            <summary>Minha denúncia é sigilosa?</summary>
+            <div class="accordion__body">A identidade do denunciante é preservada nos termos da legislação vigente, e o acesso ao conteúdo é restrito às equipes responsáveis pela apuração.</div>
+          </details>
+          <details class="accordion">
+            <summary>Como acompanho o andamento?</summary>
+            <div class="accordion__body">Use o número de protocolo gerado no envio, no formulário de consulta ao lado, ou entre em contato pelo e-mail da Ouvidoria.</div>
+          </details>
+        </div>
+
+        <aside>
+          <form class="form" data-mock-form>
+            <h3 class="card__title">Consultar protocolo</h3>
+            <p class="form-status" role="status"></p>
+            <div class="field">
+              <label for="protocolo">Número do protocolo</label>
+              <input id="protocolo" name="protocolo" type="text" placeholder="2026-00000">
+            </div>
+            <button class="btn btn--outline btn--block" type="submit">Consultar</button>
+          </form>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
